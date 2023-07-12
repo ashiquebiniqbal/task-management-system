@@ -1,46 +1,145 @@
-/* Login.css */
-
 .login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-container h2 {
+    text-align: center;
+  }
+  
+  .login-container form {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
   
-  .login-form {
-    width: 300px;
-    margin-bottom: 16px;
+  .login-container label {
+    margin-bottom: 5px;
   }
   
-  .input-field {
-    width: 100%;
+  .login-container input {
     padding: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
   
-  .button {
+  .login-container button {
+    padding: 8px 12px;
     background-color: #4caf50;
     color: white;
-    padding: 8px 16px;
     border: none;
     cursor: pointer;
   }
   
-  .button:hover {
+  .login-container button:hover {
     background-color: #45a049;
   }
   
   .centered-text {
     text-align: center;
   }
-/* TaskForm.css */
-
-.input-field {
+  
+  .task-form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .task-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .task-form input[type="text"],
+  .task-form textarea,
+  .task-form input[type="date"] {
     width: 100%;
     padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .task-form button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task-form button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .task-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  /* TaskDetail.css */
+
+.task-detail-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  .task-detail-container h2 {
+    text-align: center;
     margin-bottom: 16px;
   }
   
-  .button {
+  .task-detail-container h3 {
+    margin-top: 0;
+  }
+  
+  .task-detail-container p {
+    margin-bottom: 8px;
+  }
+  
+  .task-detail-container .comments {
+    margin-top: 16px;
+  }
+  
+  .task-detail-container .comments h4 {
+    margin-bottom: 8px;
+  }
+  
+  .task-detail-container .comment {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .task-detail-container .comment p {
+    margin-bottom: 4px;
+  }
+  
+  .task-detail-container .add-comment {
+    margin-top: 16px;
+  }
+  
+  .task-detail-container .add-comment h4 {
+    margin-bottom: 8px;
+  }
+  
+  .task-detail-container .add-comment textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .task-detail-container .add-comment button {
     background-color: #4caf50;
     color: white;
     padding: 8px 16px;
@@ -48,9 +147,10 @@
     cursor: pointer;
   }
   
-  .button:hover {
+  .task-detail-container .add-comment button:hover {
     background-color: #45a049;
   }
+  
 /* Register.css */
 
 .register-container {
@@ -85,37 +185,115 @@
   .centered-text {
     text-align: center;
   }
-  /* Dashboard.css */
-
-.dashboard-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .dashboard-container {
+    background-color: #f5f5f5;
+    padding: 20px;
   }
   
-  .task {
-    margin-bottom: 16px;
-    padding: 16px;
+  .task-card {
     border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
   }
   
-  .task h3 {
-    margin-top: 0;
+  .task-card h3 {
+    margin-bottom: 5px;
   }
   
-  .task p {
-    margin: 8px 0;
+  .task-card p {
+    margin-bottom: 5px;
   }
   
-  .button {
-    background-color: #4caf50;
-    color: white;
-    padding: 8px 16px;
+  .task-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .task-actions button {
+    background-color: #007bff;
+    color: #fff;
     border: none;
+    padding: 5px 10px;
     cursor: pointer;
   }
   
-  .button:hover {
-    background-color: #45a049;
+  .task-actions button:hover {
+    background-color: #0056b3;
+  }
+/* TaskDetail.css */
+
+.task-detail {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   
+  .task-detail h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .task-detail-info {
+    margin-top: 20px;
+  }
+  
+  .task-detail-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .task-detail-info p {
+    margin-bottom: 5px;
+  }
+  
+  .task-comments {
+    margin-top: 20px;
+  }
+  
+  .task-comments h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .comment {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .comment p {
+    margin-bottom: 5px;
+  }
+  
+  .add-comment {
+    margin-top: 20px;
+  }
+  
+  .add-comment h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .add-comment textarea {
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    margin-bottom: 10px;
+  }
+  
+  .add-comment button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+    

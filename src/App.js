@@ -9,13 +9,13 @@ import TaskForm from "./components/TaskForm";
 const App = () => {
   return (
     <Router>
-        <Routes>
-          <Route path="/" exact element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/task/:taskId" element={<TaskDetail />} />
-          <Route path="/create-task" element={<TaskForm />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/task/:taskId" element={<TaskDetail />} />
+        <Route path="/create-task" element={<TaskForm />} />
+      </Routes>
     </Router>
   );
 };

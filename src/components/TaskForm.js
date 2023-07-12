@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import '../styles.css';
+import { useNavigate } from "react-router-dom";
+import "../styles.css"; // Import the CSS file
 
 const TaskForm = () => {
+  const navigate = useNavigate();
   const [taskName, setTaskName] = useState("");
   const [description, setDescription] = useState("");
   const [dueDate, setDueDate] = useState("");
@@ -25,16 +27,17 @@ const TaskForm = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Simulate task creation success
-    alert("Task Created Successfully!");
-    setTaskName("");
-    setDescription("");
-    setDueDate("");
-    setAssignee("");
+    // Process form submission, create new task, etc.
+
+    // After successful task creation, navigate to the dashboard
+    navigate("/dashboard");
   };
 
   return (
-    <div>
+    <div className="task-form">
+
+
+
       <h2>Create Task</h2>
       <form onSubmit={handleFormSubmit}>
         <label>Task Name</label>

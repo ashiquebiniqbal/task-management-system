@@ -2,6 +2,9 @@
 
 ## Live link : https://task-mamagement.web.app/
 
+### Mock email for login : mock@example.com
+### mock password : password
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

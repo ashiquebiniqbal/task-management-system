@@ -85,4 +85,37 @@
   .centered-text {
     text-align: center;
   }
-      
+  /* Dashboard.css */
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .task {
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  .task h3 {
+    margin-top: 0;
+  }
+  
+  .task p {
+    margin: 8px 0;
+  }
+  
+  .button {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import "../styles.css"; // Import CSS file
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -21,17 +23,20 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="register-container">
       <h2>Register</h2>
-      <form onSubmit={handleFormSubmit}>
+      <form className="register-form" onSubmit={handleFormSubmit}>
         <label>Email</label>
-        <input type="email" value={email} onChange={handleEmailChange} />
+        <input type="email" value={email} onChange={handleEmailChange} className="input-field" />
 
         <label>Password</label>
-        <input type="password" value={password} onChange={handlePasswordChange} />
+        <input type="password" value={password} onChange={handlePasswordChange} className="input-field" />
 
-        <button type="submit">Register</button>
+        <button type="submit" className="button">Register</button>
       </form>
+      <p className="centered-text">
+        Already have an account? <Link to="/">Login</Link>
+      </p>
     </div>
   );
 };

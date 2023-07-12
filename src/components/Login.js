@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import "../styles.css"; // Import CSS file
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,20 +22,22 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
+      <form className="login-form" onSubmit={handleFormSubmit}>
         <label>Email</label>
-        <input type="email" value={email} onChange={handleEmailChange} />
+        <input type="email" value={email} onChange={handleEmailChange} className="input-field" />
 
         <label>Password</label>
-        <input type="password" value={password} onChange={handlePasswordChange} />
+        <input type="password" value={password} onChange={handlePasswordChange} className="input-field" />
 
-        <button type="submit">Login</button>
+        <button type="submit" className="button">Login</button>
       </form>
+      <p className="centered-text">
+        Don't Have an Account? <Link to="/register">Register Now</Link>
+      </p>
     </div>
   );
 };
 
 export default Login;
-
